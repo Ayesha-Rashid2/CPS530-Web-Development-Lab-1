@@ -1,0 +1,106 @@
+* { box-sizing: border-box; 
+    margin: 0; }
+
+    body {
+    font-family: sans-serif; 
+    background-color: #f4f4f9; 
+    }
+
+.Title-Box {
+    text-align: center; 
+    color: #000000;
+    gap: 15px; 
+    background-color: #f477a9; 
+    padding: 20px; 
+}
+
+.End-Box {
+    text-align: center; 
+    color: #ffffff;
+    gap: 15px; 
+    background-color: #061a2c; 
+    padding: 10px; 
+}
+
+.Animal-Figures {
+    width: 80%; 
+    margin: 30px auto; 
+    padding: 10px; 
+    border: 5px solid #000000;
+    border-radius: 20px; 
+}
+
+.Animal-Photos-Row {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    margin-bottom: 10px;
+}
+
+.Animal-Photos {
+    width: 18%; 
+    max-width: 18%; 
+    height: auto; 
+    border-radius: 10%;
+}
+
+.Animal-Photos:hover {
+  cursor: pointer;
+  opacity: 0.7; 
+}
+
+.Hover {
+    cursor: pointer;
+    opacity: 0.7; 
+}
+
+
+.Animal-Content-Box {
+    display: grid; 
+    color: #000000;
+    grid-template-columns: auto auto auto auto auto; 
+    gap: 15px; 
+    background-color: #acc4d9; 
+    padding: 20px; 
+}
+
+.Animal-Content-Box > div { 
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 3px 0px #999999; 
+ }
+
+
+
+
+.layout {float:left; width:25%; font-size:48px}
+
+/* Desktop & Tablet View */
+@media screen and (max-width: 980px) {
+    .Animal-Photos {
+        width: 30%; 
+        max-width: 30%;
+    }
+
+    .Animal-Content-Box {
+        grid-template-columns: auto auto auto auto auto; 
+    }
+}
+
+/* Mobile View  */
+@media screen and (max-width: 600px) {
+    .Animal-Photos-Row {
+        flex-direction: column; 
+        align-items: center; 
+    }
+    
+    .Animal-Photos {
+        width: 80%; 
+        max-width: 80%;
+        margin-bottom: 15px;
+    }
+
+    .Animal-Content-Box {
+        grid-template-columns: auto auto auto auto auto; 
+    }
+}
