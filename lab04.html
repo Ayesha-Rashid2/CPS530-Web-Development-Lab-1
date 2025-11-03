@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="lab04.js"></script>
+
+</head>
+
+<body>
+    <script>
+        bookmarks = ["https://www.notion.com/", 
+                    "https://www.youtube.com/", 
+                    "http://www.whatsapp.com/?lang=en",
+                    "https://www.instagram.com/",
+                    "http://www.gotransit.com/en",
+                    "https://www.goodreads.com/",
+                    "https://www.netflix.com/"
+                    ];
+
+        function createBookMarkList() {
+            //Used Google to find their icon span classes
+            secure_icon = "<span class='secure-icon'>&#128274;</span>";
+            insecure_icon = "<span class='secure-icon'>&#128275;</span>";
+
+            for (let url of bookmarks) {
+                output_line = "";
+                if (url.includes("https://")) {
+                        output_line = secure_icon + " " + url;
+                    } 
+                else if (url.includes("http://")) {
+                        output_line = insecure_icon + " " + url;
+                    }   
+                
+                document.write(output_line + " <br> ");
+
+            }
+        }
+        document.write("<b><u> Problem #1: </b> </u> <br>");
+        createBookMarkList();
+    </script>
+
+    <script>
+        document.write("<br> <u> <b> Problem #2: </b> </u> <br>");
+        results("Hello");
+        results("Mr. Owl ate my metal worm.");
+        results("I'm on a seafood diet. I see food and I eat it.");
+        results("level");
+        results("Love is sharing your popcorn.");
+        results("Was it a car or a cat I saw?");
+        results("A man, a plan, a canal, Panama!");
+        results("This is a random STRING!");
+        results("Taco cat.!")
+    </script>
+
+</body>
+
+
+</html>
